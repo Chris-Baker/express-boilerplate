@@ -2,7 +2,7 @@
   "name": "node-boilerplate",
   "version": "1.0.0",
   "description": "Node Typescript and Express boilerplate for setting up quick micro service APIs",
-  "main": "index.js",
+  "main": "server.ts",
   "author": "Chris Baker",
   "license": "MIT",
   "scripts": {
