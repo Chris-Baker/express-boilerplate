@@ -1,0 +1,11 @@
+{
+  "name": "node-boilerplate",
+  "version": "1.0.0",
+  "description": "Node Typescript and Express boilerplate for setting up quick micro service APIs",
+  "main": "index.js",
+  "author": "Chris Baker",
+  "license": "MIT",
+  "scripts": {
+
+  }
+}
