@@ -1,7 +1,7 @@
-import {controller, httpGet, BaseHttpController} from "inversify-express-utils";
+import { controller, httpGet, BaseHttpController } from "inversify-express-utils";
 
 @controller("/")
-class ExampleController extends BaseHttpController {
+export class ExampleController extends BaseHttpController {
     @httpGet("/")
     public async get() {
         return this.ok({

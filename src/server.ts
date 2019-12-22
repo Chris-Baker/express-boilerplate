@@ -1,27 +1,30 @@
-import "reflect-metadata";
+/** @format */
+
+import 'reflect-metadata';
 import * as bodyParser from 'body-parser';
 import { Container } from 'inversify';
-import { interfaces, InversifyExpressServer, TYPE } from 'inversify-express-utils';
-
+import { InversifyExpressServer } from 'inversify-express-utils';
 
 // declare metadata by @controller annotation
-import "./controllers/ExampleController";
+import './controllers/ExampleController';
 
 // set up container
-let container = new Container();
+const container = new Container();
 
 // set up bindings
 //container.bind<FooService>('FooService').to(FooService);
 
 // create server
-let server = new InversifyExpressServer(container);
+const server = new InversifyExpressServer(container);
 server.setConfig((app) => {
     // add body parser
-    app.use(bodyParser.urlencoded({
-        extended: true
-    }));
+    app.use(
+        bodyParser.urlencoded({
+            extended: true
+        })
+    );
     app.use(bodyParser.json());
 });
 
-let app = server.build();
-app.listen(3000, () => console.log("Serving on port 3000"));
+const app = server.build();
+app.listen(3000, () => console.log('Serving on port 3000'));
