@@ -6,7 +6,7 @@ import { Container } from 'inversify';
 import { InversifyExpressServer } from 'inversify-express-utils';
 
 // declare metadata by @controller annotation
-import './controllers/ExampleController';
+import './controllers/example-controller';
 
 // set up container
 const container = new Container();
@@ -20,7 +20,7 @@ server.setConfig((app) => {
     // add body parser
     app.use(
         bodyParser.urlencoded({
-            extended: true
+            extended: true,
         })
     );
     app.use(bodyParser.json());
